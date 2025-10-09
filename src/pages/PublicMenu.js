@@ -12,6 +12,7 @@ import { normalizeImageUrl } from "../utils/driveUrl";
 import { listCategories } from "../services/categories";
 import { formatIDR } from "../utils/money";
 import appLogo from "../images/login-logo.png"; // your brand logo
+import { Link } from "react-router-dom";
 
 /* ---------------- Constants ---------------- */
 const DEFAULT_CATEGORY = "Coffee";
@@ -243,9 +244,9 @@ export default function PublicMenu() {
       <main className="layout-main">
         {/* Brand Header */}
         <header className="public-header" role="banner">
-          <a href="/menu" aria-label="Home">
+          <Link to="/menu" aria-label="Home">
             <img src={appLogo} alt="Your Brand Logo" className="public-logo" />
-          </a>
+          </Link>
           {/* optional title */}
           {/* <div className="public-title">
             <strong>Your Café</strong>
